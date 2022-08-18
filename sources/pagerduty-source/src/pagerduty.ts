@@ -225,6 +225,7 @@ export class Pagerduty {
     }
     const limitParam = `&limit=${limit.toFixed()}`;
     const incidentsResource = `/incidents?time_zone=UTC${timeRange}${limitParam}`;
+    console.log(incidentsResource)
     this.logger.debug(`Fetching Incidents at ${incidentsResource}`);
 
     const func = (): any => {
